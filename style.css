@@ -1,0 +1,181 @@
+﻿:root {
+  --grape: #5b3a78;
+  --light-navy: #697fae;
+  --pale-navy: #8ea4c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #f5f2ff;
+  background: linear-gradient(135deg, #5b3a78 0%, #697fae 52%, #8ea4c8 100%);
+  background-attachment: fixed;
+}
+
+header {
+  padding: 16px 8%;
+  background: rgba(31, 43, 75, 0.92);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+#home {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+  color: #e4d2ff;
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+#home a {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: white;
+  background: var(--grape);
+  text-decoration: none;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: white;
+  background: rgba(31, 43, 75, 0.92);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  padding: 10px 16px;
+  background: white;
+  border: 1px solid #d8e1ec;
+  border-radius: 8px;
+}
+#projects article {
+  padding: 20px;
+  margin-top: 16px;
+  background: white;
+  border: 1px solid #d8e1ec;
+  border-radius: 8px;
+}
+
+#projects article h3 {
+  margin-top: 0;
+}
+@media (max-width: 600px) {
+  nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
+#home {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 18px;
+  border: 4px solid white;
+  box-shadow: 0 12px 30px rgba(36, 48, 71, 0.3);
+}
+
+@media (max-width: 600px) {
+  #home {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    grid-row: 1;
+    justify-self: center;
+    width: 190px;
+  }
+
+  .home-intro {
+    grid-row: 2;
+  }
+}
+
+
+
+
+#skills li,
+#projects article {
+  color: #243047;
+}
+
